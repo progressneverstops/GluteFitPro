@@ -1,0 +1,62 @@
+body.dark-mode {
+  background-color: #333;
+  color: #f0f0f0; /* Default body text color (light gray) */
+}
+
+.dark-mode p {
+  color: #ffffff; /* White paragraphs - even lighter for more contrast */
+}
+
+.dark-mode #mealPlanContent p {
+  color: #555; /* Dark grey paragraph text in mealPlanContent */
+}
+
+.dark-mode #workoutPlanContent p {
+  color: #000000; /* Black paragraph text in workoutPlanContent */
+}
+
+.dark-mode .section {
+  background-color: #222; /* Darker section background for better contrast */
+  border-color: #555;
+}
+
+.dark-mode .form-group label {
+  color: #ddd; /* Whiteish gray labels in dark mode */
+}
+
+.dark-mode .app-header {
+  color: #fff;
+  background: linear-gradient(135deg, #f787b3, #40f0b0); /* Lighter gradient for better contrast */
+}
+
+.dark-mode .app-footer {
+  color: #fff;
+}
+
+.dark-mode a {
+  color: #f0f0f0;
+}
+
+.dark-mode .education-section {
+  border-color: #f0f0f0;
+}
+
+.dark-mode h1,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: var(--secondary-color); /* Teal headings in dark mode */
+}
+
+.dark-mode h2 {
+  color: #ddd; /* Lighter gray for h2 headings in dark mode */
+}
+
+.recommendation-section h3 {
+  color: var(--secondary-color);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; /* Black outline for better contrast */
+}
