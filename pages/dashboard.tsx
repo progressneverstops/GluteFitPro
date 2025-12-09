@@ -31,6 +31,8 @@ export default function DashboardPage() {
 
   // Load user profile from localStorage
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const saved = localStorage.getItem('userProfile');
     if (saved) {
       const profile = JSON.parse(saved);
@@ -53,7 +55,9 @@ export default function DashboardPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem('userProfile', JSON.stringify(formData));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('userProfile', JSON.stringify(formData));
+    }
     setUserProfile(formData);
     setIsEditing(false);
   };
@@ -240,19 +244,20 @@ export default function DashboardPage() {
               <div className="card">
                 <h3>Recent Activity</h3>
                 <div className="activity-list">
-                  {localStorage.getItem('lastWorkoutPlan') && (
+                  {typeof window !== 'undefined' && localStorage.getItem('lastWorkoutPlan') && (
                     <div className="activity-item">
                       <span>✅ Last workout plan generated</span>
                       <Link href="/workout-plans">View</Link>
                     </div>
                   )}
-                  {localStorage.getItem('lastMealPlan') && (
+                  {typeof window !== 'undefined' && localStorage.getItem('lastMealPlan') && (
                     <div className="activity-item">
                       <span>✅ Last meal plan generated</span>
                       <Link href="/meal-plan">View</Link>
                     </div>
                   )}
-                  {!localStorage.getItem('lastWorkoutPlan') &&
+                  {typeof window !== 'undefined' &&
+                    !localStorage.getItem('lastWorkoutPlan') &&
                     !localStorage.getItem('lastMealPlan') && (
                       <p className="empty-state">
                         No activity yet. Generate your first workout or meal plan!
