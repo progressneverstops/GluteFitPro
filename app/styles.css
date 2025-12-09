@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #0f0f0f;
+  color: #ffffff;
+}
+
+body.dark-mode .app-container {
+  background: linear-gradient(135deg, #1a0f1a, #0f1a1a) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .tab-content,
+body.dark-mode .profile-bar {
+  background: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+body.dark-mode .form-group label {
+  color: #ffffff;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #0f0f0f;
+  color: #ffffff;
+  border-color: #555;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus {
+  border-color: #ff6b9d;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+body.dark-mode .form-group select option {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode .day-card,
+body.dark-mode .meal-card {
+  background: #252525;
+  border: 1px solid #444;
+}
+
+body.dark-mode .day-card li,
+body.dark-mode .meal-card li {
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode .day-card h4,
+body.dark-mode .meal-card h4 {
+  color: #ff6b9d;
+}
+
+body.dark-mode .btn-secondary {
+  background: #2d2d2d;
+  color: #ffffff;
+  border-color: #666;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #3d3d3d;
+  border-color: #777;
+}
+
+body.dark-mode .btn-edit-profile {
+  background: #2d2d2d;
+  color: #ffffff;
+  border-color: #666;
+}
+
+body.dark-mode .btn-edit-profile:hover {
+  background: #3d3d3d;
+  border-color: #777;
+}
+
+body.dark-mode .profile-info span {
+  color: #ffffff;
+}
+
+body.dark-mode .profile-info span:first-child {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+body.dark-mode .profile-details {
+  color: #ffffff;
+}
+
+body.dark-mode .activity-item {
+  background: #252525;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+body.dark-mode .activity-item a {
+  color: #ff00ff;
+}
+
+body.dark-mode .activity-item a:visited {
+  color: #ff00ff;
+}
+
+body.dark-mode a:link {
+  color: #ff00ff;
+}
+
+body.dark-mode a:visited {
+  color: #ff00ff;
+}
+
+body.dark-mode a:hover {
+  color: #ff66ff;
+}
+
+body.dark-mode .empty-state {
+  color: #ffffff;
+}
+
+body.dark-mode .tab-container {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode .tab-button {
+  color: #ffffff;
+}
+
+body.dark-mode .tab-button:hover {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .tab-button.active {
+  background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+  color: white;
+}
+
+body.dark-mode .profile-bar {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #ffffff;
+}
+
+body.dark-mode .day-card h3,
+body.dark-mode .day-card h4,
+body.dark-mode .meal-card h3,
+body.dark-mode .meal-card h4 {
+  color: #ffffff;
+}
+
+body.dark-mode .subtitle {
+  color: #ffffff;
+}
+
+body.dark-mode .dashboard-link a {
+  color: #ff00ff;
+}
+
+body.dark-mode .dashboard-link a:hover {
+  color: #ff66ff;
+}
+
+body.dark-mode .dashboard-link a:visited {
+  color: #ff00ff;
+}
+
+body.dark-mode p {
+  color: #ffffff;
+}
+
+body.dark-mode .tagline {
+  color: #ffffff;
+}
+
+body.dark-mode .info-row {
+  border-color: #444;
+}
+
+body.dark-mode .label,
+body.dark-mode .info-row .label,
+body.dark-mode .profile-info .label,
+body.dark-mode .card .label {
+  color: #ffffff !important;
+}
+
+body.dark-mode .value,
+body.dark-mode .info-row .value,
+body.dark-mode .profile-info .value,
+body.dark-mode .card .value {
+  color: #ffffff !important;
+}
+
+body.dark-mode .profile-info span,
+body.dark-mode .info-row span,
+body.dark-mode .card span {
+  color: #ffffff !important;
+}
+
+body.dark-mode .profile-bar span {
+  color: #ffffff !important;
+}
+
+body.dark-mode .capitalize {
+  color: #ffffff !important;
+}
+
+/* Force all text in profile cards to be white in dark mode */
+body.dark-mode .card .profile-info *,
+body.dark-mode .card .info-row *,
+body.dark-mode .card .label,
+body.dark-mode .card .value {
+  color: #ffffff !important;
+}
+
+body.dark-mode .card span {
+  color: #ffffff !important;
+}
+
+body.dark-mode .action-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode .action-card:hover {
+  background: #252525;
+  border-color: #444;
+}
+
+body.dark-mode .action-card h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .action-card p {
+  color: #ffffff;
+}
+
+body.dark-mode .header-link {
+  color: #ff00ff !important;
+}
+
+body.dark-mode .header-link:visited {
+  color: #ff00ff !important;
+}
+
+body.dark-mode .header-link:hover {
+  color: #ff66ff !important;
+}
+
